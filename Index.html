@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 사용할 색감은?</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">🔮 마법의 NFC가 말하길... 🔮</p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "오늘은 빨간색이 딱이네요!",
+                "오늘은 파란색이 딱이네요!",
+                "오늘은 노란색이 딱이네요!",
+                "오늘은 초록색이 딱이네요!",
+                "다시 시도해보세요."
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
